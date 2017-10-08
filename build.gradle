@@ -1,4 +1,4 @@
-group 'com.teamtreehouse.homeautomationrestapi'
+group 'com.teamtreehouse'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -12,6 +12,7 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+
 sourceCompatibility = 1.8
 
 repositories {
@@ -22,5 +23,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-rest'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'com.h2database:h2'
+    compile "org.springframework.data:spring-data-rest-hal-browser"
+    compile "org.springframework.boot:spring-boot-starter-security"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

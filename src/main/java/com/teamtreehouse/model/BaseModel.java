@@ -1,9 +1,6 @@
 package com.teamtreehouse.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 /**
  * Created by mark on 10/7/17.
@@ -13,6 +10,8 @@ public class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private final Long id;
+    @Version
+    private Long version;
 
     protected BaseModel(){
         id = null;
