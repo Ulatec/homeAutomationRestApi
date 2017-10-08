@@ -1,6 +1,7 @@
 package com.teamtreehouse.model;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
@@ -10,7 +11,9 @@ import java.util.List;
 public class Room extends BaseModel{
     String name;
     int area;
+    @OneToMany
     List<Device> devices;
+    @OneToMany
     List<User> administrators;
 
     public String getName() {
